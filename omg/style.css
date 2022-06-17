@@ -1,0 +1,149 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600vh;
+    width: 100vw;
+    flex-direction: column;
+}
+/* .container{
+
+    height: 80%;
+    width: 80%;
+    border: 1px solid saddlebrown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.container{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+}
+
+.jvectormap-container{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ur{
+    z-index: 10000;
+    fill: burlywood;
+}
+
+.svg{
+
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 12px solid black;
+    text-align: center;
+}
+
+.ggg{
+    transform: scale(0.2);
+    border: 1px solid black;
+    align-self: center;
+    justify-self:center;
+    width: 40%;
+    height: auto;
+    margin-left: 10%;
+}
+
+.qqwe{
+    height: 400vh;
+    width: 100vw;
+}
+
+path{
+    fill: #30C12E;
+    transition: 0.4s;
+}
+
+path:hover{
+    fill: greenyellow;
+}
+
+.tree {}
+
+.treeBottom {
+    fill: #DC7633;
+}
+
+.treeTop {
+    fill: forestgreen;
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.one {
+    left: 13%;
+    top: 380px;
+}
+
+.two {
+    left: 23%;
+    top: 330px;
+}
+
+.three {
+    top: 400px;
+    left: 31%;
+}
+
+.four {
+    top: 440px;
+    left: 20%;
+}
+
+.five {
+    top: 600px;
+    left: 31%;
+}
+
+.six {
+    top: 280px;
+    left: 40%;
+}
+
+.seven {
+    top: 440px;
+    left: 43%;
+}
+
+.eight {
+    top: 350px;
+    left: 47%;
+}
+
+.nine {
+    width: 10px;
+    height: 10px;
+    top: 384px;
+    left: 50.4%;
+}
+
+.ten {
+    top: 330px;
+    right: 46%;
+}

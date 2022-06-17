@@ -1,0 +1,283 @@
+:root {
+    --blue: #287dfe;
+}
+
+*, *::before, *::after {
+    margin: 0%;
+    text-decoration: none;
+    padding: 0%;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--blue);
+}
+
+header{
+    padding: 20px 10%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    position: sticky;
+    top: 0%;
+    left: 0%;
+    border-bottom: 0.009px solid white;
+    z-index: 100;
+    right: 0%;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+header span {
+    font-size: 2.3rem;
+    color: #fff;
+}
+
+header span a {
+    color: #fff;
+    margin-left: 50px;
+}
+
+header span:nth-child(3) {
+    display: none;
+    align-items: center;
+}
+
+@media (max-width: 1351px) {
+    header {
+        justify-content: flex-end;
+    }
+    header span {
+        display: none;
+    }
+    header span:nth-child(3) {
+        display: flex;
+    }
+}
+
+header span:nth-child(3) .bar {
+    width: 3rem;
+    background: none;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    justify-content: center;
+    height: 3rem;
+}
+
+.bar::before {
+    content: '';
+    width: 3rem;
+    position: absolute;
+    height: 3px;
+    background: #fff;
+    transform: translateY(-13px);
+    box-shadow: 0 15px 0 #fff;
+}
+
+.bar::after {
+    content: '';
+    width: 3rem;
+    position: absolute;
+    height: 3px;
+    background: #fff;
+    transform: translateY(13px);
+}
+
+.bar::after:hover {
+    transform: rotate(45%);
+}
+
+.bar::before:hover {
+    transform: rotate(-45%);
+}
+
+
+
+
+.barItems {
+    position: fixed;
+    right: -400%;
+    top: 7rem;
+    padding: 3rem;
+    transition: 0.3s;
+    z-index: 100;
+    width: 500px;
+    border: 00.009px solid white;
+    height: auto;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 1px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+.active {
+    right: 0%;
+}
+
+.barItems a {
+    font-size: 2.3rem;
+    color: #fff;
+    width: 3rem;
+    margin-bottom: 3rem;
+    display: block;
+}
+
+.barItems .burtgel {
+    width: auto;
+}
+
+.container {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    left: 0%;
+    top: 0%;
+    overflow: hidden;
+    right: 0%;
+    bottom: 0%;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #31EC13;
+    margin: 0 4px; border-radius: 50%;
+    box-shadow: 0 0 0 10px #00FF00,
+    0 0 50px #00FF00,
+    0 0 100px #00FF00;
+    z-index: -1;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(100s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #31EC13;
+    box-shadow: 0 0 0 10px #00FF00,
+    0 0 50px #00FF00,
+    0 0 100px #00FF00;
+}
+
+@media (max-width: 1000px) {
+    .bubbles span {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    } 100% {
+        transform: translateY(-10vh) scale(0.5);
+    }
+}
+
+#content {
+    width: 100vw;
+    height: 40vh;
+}
+
+#main {
+    margin-top: 30px;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    width: 80%;
+    height: 100vh;
+    gap: 10px;
+}
+
+.second{
+    margin-top: 30px;
+    margin-bottom: 100px;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    border: 0.009px solid white;
+    display: flex;
+    color: #fff;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    align-items: flex-start;
+}
+
+.second img{
+    width: 20%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.second span{
+    margin-left: 3%;
+}
+
+.second span h1{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.second span h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.second span p {
+    font-size: 1.2rem;
+}
+
+.second span p:last-child{
+    margin-top: 4%;
+}
+
+@media (max-width: 1300px) {
+    #container {
+        width: 100%;
+        /* padding: 4rem; */
+    }
+
+    .second {
+        height: auto;
+        width: 100%;
+        font-size: 0.5rem;
+        display: block;
+        padding: 0 0 0 0px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .second img{
+        width: 100%;
+    }
+}
+
+.howMany {
+    color: #00FF00;
+    font-size: 3rem;
+    /* margin-top: 10px; */
+}
+
+#treeIcon {
+    width: 2rem;
+    height: auto;
+    background: url('treeIcon.png');
+}
